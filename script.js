@@ -7,19 +7,27 @@ document.addEventListener('keydown', (event)=>{
     var pressedKey = event.key;
 
     if(pressedKey === 'd'){
-        x += 10;
-        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        if(x < 800){
+            x += 10;
+            theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        }
     }
     else if(pressedKey === 'a'){
-        x -= 10;
-        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        if(x > 0){
+            x -= 10;
+            theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        }
     }
     else if(pressedKey === 'w'){
-        y -= 10;
-        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        if(y > 0){
+            y -= 10;
+            theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        }
     }
     else if(pressedKey === 's'){
-        y += 10;
-        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        if(y < 400){
+            y += 10;
+            theBallTag.style.transform = `translate(${x}px, ${y}px)`;
+        }
     }
 });
