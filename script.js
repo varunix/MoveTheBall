@@ -1,20 +1,25 @@
 var outerDivTag = document.getElementById('outerDiv');
 var theBallTag = document.getElementById('theBall');
+var x = 0;
+var y = 0;
 
 document.addEventListener('keydown', (event)=>{
     var pressedKey = event.key;
 
     if(pressedKey === 'd'){
-        count = 50;
-        theBallTag.style.transform = "translateX("+count+"px)";
+        x += 10;
+        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
     }
     else if(pressedKey === 'a'){
-        console.log(pressedKey)
+        x -= 10;
+        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
     }
     else if(pressedKey === 'w'){
-        console.log(pressedKey)
+        y -= 10;
+        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
     }
     else if(pressedKey === 's'){
-        console.log(pressedKey)
+        y += 10;
+        theBallTag.style.transform = `translate(${x}px, ${y}px)`;
     }
 });
