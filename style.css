@@ -1,0 +1,23 @@
+#outerDiv{
+    margin: auto;
+    margin-top: 60px;
+    background-color: azure;
+    height: 500px;
+    width: 900px;
+    border-radius: 5%;
+}
+
+#theBall{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+    transform: translateX(0px);
+}
+
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    color: brown;
+}
